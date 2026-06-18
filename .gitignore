@@ -1,0 +1,44 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Sensitive files containing passwords/credentials
+config_detection.json
+working_cam241_url.txt
+
+# Log files
+*.log
+detection_log.txt
+output.log
+
+# Snapshot & Video output folders (evidence vaults)
+cctv1_images/
+cctv_images/
+cctv_recordings/
+temp_videos/
+snapshots/
+detections/
+scratch/
+best2.pt images/
+*.jpg
+*.png
+*.avi
+*.mp4
+*.mkv
+*.mov
+
+# Ignore generated results from testing script
+result_direct_*.jpg
+result_roi_*.jpg
+live_view.jpg
+detection_verify_improved.jpg
+
+# IDE / Editor configurations
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?

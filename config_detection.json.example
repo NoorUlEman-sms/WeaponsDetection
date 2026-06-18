@@ -1,0 +1,20 @@
+{
+    "person_model_path": "yolov8n.pt",
+    "weapon_model_path": "models/bestcctv1.pt",
+    "available_models": [
+        "models/bestcctv1.pt",
+        "models/best2.pt",
+        "models/best.pt"
+    ],
+    "conf_thresh": 0.50,
+    "min_size_ratio": 0.01,
+    "temporal_threshold": 3,
+    "expansion_factor": 0.2,
+    "port": 8082,
+    "default_camera": "Camera 1",
+    "cameras": {
+        "Camera 1": "rtsp://username:password@IP_ADDRESS:PORT/h264/ch1/main/av_stream",
+        "Camera 2": "rtsp://username:password@IP_ADDRESS:PORT/cam/realmonitor?channel=1&subtype=0",
+        "Camera 3": "rtsp://username:password@IP_ADDRESS:PORT/cam/realmonitor?channel=1&subtype=1"
+    }
+}
