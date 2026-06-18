@@ -5,22 +5,22 @@ SMS Vision AI is a high-performance, real-time weapon detection system designed 
 ---
 
 ## Key Features
-* 🚀 **Two-Stage Pipeline**: 
+*  **Two-Stage Pipeline**: 
   * **Stage 1 (Person Scan)**: Standard YOLOv8n scans the entire frame at a low resolution (`imgsz=256`) to locate people rapidly.
   * **Stage 2 (Weapon Scan)**: Crops a Region of Interest (ROI) around each person, expands it by 20%, and runs a custom CCTV weapon model (`bestcctv1.pt`) at high resolution (`imgsz=640`).
-* 📊 **Hungarian Algorithm Tracker**: Keeps track of individuals across frames, handles temporary occlusions (ghost tracks up to 8 frames), and estimates box velocities.
-* 🛡️ **False-Positive Guards**: 
+*  **Hungarian Algorithm Tracker**: Keeps track of individuals across frames, handles temporary occlusions (ghost tracks up to 8 frames), and estimates box velocities.
+*  **False-Positive Guards**: 
   * *Temporal Guard*: Requires consecutive frames of detection before alerting (or instant bypass for $\ge 90\%$ confidence).
   * *Size Guard*: Ignores weapon boxes that are less than 1% of the person's total size.
   * *Anatomy Guard*: Rejects detections on the very top of the head or at the feet.
-* 📺 **Interactive Web Dashboard**:
+*  **Interactive Web Dashboard**:
   * Real-time MJPEG live video feed.
   * Hot-swap cameras and AI models dynamically.
   * Timeline of threat alerts and interactive Evidence Vault for review, download, or deletion of snapshots and recordings.
 
 ---
 
-## 🛠️ Installation & Setup
+##  Installation & Setup
 
 ### 1. Install Dependencies
 Open your command prompt or terminal and run:
@@ -42,7 +42,7 @@ To prevent private camera passwords and IP addresses from leaking to GitHub, set
 
 ---
 
-## 🚀 How to Run the Project
+##  How to Run the Project
 
 ### Running the Live CCTV Server
 Run the Flask server with the unbuffered Python flag:
@@ -50,7 +50,7 @@ Run the Flask server with the unbuffered Python flag:
 python -u app_roi.py
 ```
 Open your browser and navigate to:
-👉 **[http://127.0.0.1:8082](http://127.0.0.1:8082)**
+ **[http://127.0.0.1:8082](http://127.0.0.1:8082)**
 
 ### Running the Offline Video Demo
 If you want to test the ROI detection pipeline on a local video file (without connecting to active camera streams):
@@ -62,6 +62,6 @@ Open your browser and navigate to:
 
 ---
 
-## 📖 Deep Technical Documentation
+##  Deep Technical Documentation
 For in-depth mathematical formulas, flow diagrams, tracker explanations, and filter definitions, refer to the full documentation:
-📄 **[SMS_Vision_AI_Project_Documentation.md](./SMS_Vision_AI_Project_Documentation.md)**
+ **[SMS_Vision_AI_Project_Documentation.md](./SMS_Vision_AI_Project_Documentation.md)**
